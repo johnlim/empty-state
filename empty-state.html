@@ -1,0 +1,34 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`empty-state`
+A responsive element to represent your empty states.
+
+@demo demo/index.html 
+-->
+
+<dom-module id="empty-state">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'empty-state',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'empty-state',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
