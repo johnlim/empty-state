@@ -1,4 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-image/iron-image.html">
 
 <!--
 `empty-state`
@@ -13,8 +14,21 @@ A responsive element to represent your empty states.
       :host {
         display: block;
       }
+
+      .empty-state-container {
+        position:absolute;
+        top:45%;
+        left:50%;
+        padding:15px;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+      }
     </style>
-    <h2>Hello [[prop1]]</h2>
+
+    <div class="empty-state-container">
+      <iron-image height="{{height}}" width="{{width}}" sizing="contain" src="{{src}}"></iron-image>
+    </div>
   </template>
 
   <script>
@@ -23,11 +37,15 @@ A responsive element to represent your empty states.
       is: 'empty-state',
 
       properties: {
-        prop1: {
-          type: String,
-          value: 'empty-state',
+        height: {
+          type: Number,
+          value: "250"
         },
-      },
+        width: {
+          type: Number,
+          value: "250"
+        }
+      }
 
     });
   </script>
