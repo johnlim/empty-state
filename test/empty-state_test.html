@@ -20,12 +20,33 @@
 
     <script>
       suite('empty-state', function() {
+        var element;
+
+        setup(function() {
+          element = fixture('basic');
+        });
 
         test('instantiating the element works', function() {
-          var element = fixture('basic');
           assert.equal(element.is, 'empty-state');
         });
 
+        test('element is hidden', function(done) {
+          element.hidden = true;
+          flush(function() {
+            var image = Polymer.dom(element.root).querySelectorAll('iron-image');
+            assert.equal(image.length, 0);
+            done();
+          });
+        });
+
+        test('element is visible', function(done) {
+          element.hidden = false;
+          flush(function() {
+            var image = Polymer.dom(element.root).querySelectorAll('iron-image');
+            assert.equal(image.length, 1);
+            done();
+          });
+        });
       });
     </script>
   </body>
