@@ -26,7 +26,7 @@ A responsive element to represent your empty states.
       }
     </style>
 
-    <template is="dom-if" if="[[!hidden]]">
+    <template is="dom-if" if="[[!hide]]">
       <div class="empty-state-container">
         <iron-image height="{{height}}" width="{{width}}" sizing="contain" src="{{src}}"></iron-image>
       </div>
@@ -47,7 +47,7 @@ A responsive element to represent your empty states.
           type: Number,
           value: "250"
         },
-        hidden: {
+        hide: {
           type: Boolean,
           value: false
         }

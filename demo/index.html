@@ -17,8 +17,8 @@
   <body>
     <template is="dom-bind" id="app">
       <div class="vertical-section-container centered">
-        <empty-state height="250" width="250" src="empty-state.png" hidden="[[cart.length]]"></empty-state>
-        <empty-state height="500" width="500" src="fire-red-shrimps.jpeg" hidden="[[!cart.length]]"></empty-state>
+        <empty-state height="250" width="250" src="empty-state.png" hide="[[cart.length]]"></empty-state>
+        <empty-state height="500" width="500" src="fire-red-shrimps.jpeg" hide="[[!cart.length]]"></empty-state>
       </div>
       <button on-click="addShrimps">Get Some Awesome Fire Red Shrimps</button>
     </template>

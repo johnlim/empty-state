@@ -31,7 +31,7 @@
         });
 
         test('element is hidden', function(done) {
-          element.hidden = true;
+          element.hide = true;
           flush(function() {
             var image = Polymer.dom(element.root).querySelectorAll('iron-image');
             assert.equal(image.length, 0);
@@ -40,7 +40,7 @@
         });
 
         test('element is visible', function(done) {
-          element.hidden = false;
+          element.hide = false;
           flush(function() {
             var image = Polymer.dom(element.root).querySelectorAll('iron-image');
             assert.equal(image.length, 1);
